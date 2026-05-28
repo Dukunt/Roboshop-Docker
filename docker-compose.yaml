@@ -2,15 +2,15 @@ services:
  catalogue:
   build:
    dockerfile: catalogue.Dockerfile
-   image: catalogue:1.0.0
-   container_name: mycatalogue
-   depends_on:
+  image: catalogue:1.0.0
+  container_name: mycatalogue
+  depends_on:
     - mongodb
  mongodb:
   build:
    dockerfile: mongodb.Dockerfile
-   image: mongobd:1.0.0
-   container_name: mymongo
+  image: mongobd:1.0.0
+  container_name: mymongo
 
 network:
  default:

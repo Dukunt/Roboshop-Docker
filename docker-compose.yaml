@@ -1,13 +1,14 @@
 services:
  catalogue:
-  build:
-   dockerfile: catalogue.Dockerfile
+  build: 
+    dockerfile: catalogue.Dockerfile
   image: catalogue:1.0.0
   container_name: mycatalogue
   depends_on:
     - mongodb
  mongodb:
   build:
+   context: "D:/DevSecops-ShivaKumar/Git-repos/Roboshop-Docker/mongodb"
    dockerfile: mongodb.Dockerfile
   image: mongobd:1.0.0
   container_name: mymongo

@@ -12,7 +12,7 @@ services:
   image: mongobd:1.0.0
   container_name: mymongo
 
-network:
+networks:
  default:
   driver: bridge
   name: robo

@@ -1,6 +1,7 @@
 services:
  catalogue:
   build: 
+    context: .
     dockerfile: catalogue.Dockerfile
   image: catalogue:1.0.0
   container_name: mycatalogue

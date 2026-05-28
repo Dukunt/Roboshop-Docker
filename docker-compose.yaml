@@ -8,7 +8,7 @@ services:
     - mongodb
  mongodb:
   build:
-   context: "D:/DevSecops-ShivaKumar/Git-repos/Roboshop-Docker/mongodb"
+   context: .
    dockerfile: mongodb.Dockerfile
   image: mongobd:1.0.0
   container_name: mymongo

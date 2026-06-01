@@ -9,6 +9,15 @@ services:
   build: ./mongodb
   image: joindevops/mongobd:1.0.0
   container_name: mymongo
+ frontend:
+  build: ./frontend
+  image: frontend:1.0.0
+  container_name: myfrontend
+  ports:
+   - "80:80"
+  depends_on:
+   - catalogue 
+
 
 networks:
  default:

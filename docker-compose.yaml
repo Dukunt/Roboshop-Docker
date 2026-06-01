@@ -7,7 +7,7 @@ services:
     - mongodb
  mongodb:
   build: ./mongodb
-  image: joindevops/mongobd:1.0.0
+  image: mongobd:1.0.0
   container_name: mymongo
  frontend:
   build: ./frontend

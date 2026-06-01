@@ -1,10 +1,12 @@
 services:
  catalogue:
-  image: joindevops/catalogue:1.0.0
+  build: ./catalogue 
+  image: catalogue:1.0.0
   container_name: mycatalogue
   depends_on:
     - mongodb
  mongodb:
+  build: ./mongodb
   image: joindevops/mongobd:1.0.0
   container_name: mymongo
 

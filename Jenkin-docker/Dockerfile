@@ -3,4 +3,5 @@ RUN curl -o /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/rpm-stable/
 RUN dnf install fontconfig java-21-openjdk -y
 RUN dnf install jenkins -y
 RUN systemctl enable jenkins
+RUN systemctl start jenkins
 ENTRYPOINT ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
